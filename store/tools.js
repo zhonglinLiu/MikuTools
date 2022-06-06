@@ -175,6 +175,17 @@ export const state = () => {
                         ],
                         description: '身份证号码查询/生成'
                     }
+                },
+                {
+                    name: '优惠券大全',
+                    path: '/coupon',
+                    head: {
+                        keywords: [
+                            '淘宝优惠券',
+                            '拼多多优惠券'
+                        ],
+                        description: '优惠券大全'
+                    }
                 }
             ]
         },

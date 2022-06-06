@@ -3,81 +3,59 @@
         <Welcome />
         <Search v-model="searchText" @enter="enterFirst">
             <template slot-scope="data">
-                <nuxt-link
-                    v-for="(tool, index) in data.data"
-                    v-show="showBtn(tool)"
-                    :key="index"
-                    :target="$store.state.setting.inNewTab ? '_blank' : '_self'"
-                    :to="tool.path"
-                    class="nya-btn"
-                >
+                <nuxt-link v-for="(tool, index) in data.data" v-show="showBtn(tool)" :key="index"
+                    :target="$store.state.setting.inNewTab ? '_blank' : '_self'" :to="tool.path" class="nya-btn">
                     {{ tool.name }}
                 </nuxt-link>
             </template>
         </Search>
-        
+
         <Favorites v-show="!searchText" />
 
-        <nya-container
-            v-if="$store.state.setting.hideCategory"
-            v-show="!searchText"
-            icon="shopping-bag-outline"
-            title="工具"
-        >
+        <nya-container v-if="$store.state.setting.hideCategory" v-show="!searchText" icon="shopping-bag-outline"
+            title="工具">
             <template v-for="(tool, index2) in toolsList">
-                <nuxt-link
-                    v-if="showBtn(tool)"
-                    :key="index2"
-                    :title="tool.name"
-                    :to="tool.path"
-                    class="nya-btn"
-                    :class="[tool.hot, {'badge': tool.hot}]"
-                >
+                <nuxt-link v-if="showBtn(tool)" :key="index2" :title="tool.name" :to="tool.path" class="nya-btn"
+                    :class="[tool.hot, {'badge': tool.hot}]">
                     {{ tool.name }}
                 </nuxt-link>
             </template>
         </nya-container>
 
         <template v-else v-show="!searchText">
-            <nya-container
-                v-for="(item, index) in $store.state.tools"
-                v-show="!searchText && showSection(item)"
-                :key="index"
-                :icon="item.icon"
-                :title="item.title"
-            >
+            <nya-container v-for="(item, index) in $store.state.tools" v-show="!searchText && showSection(item)"
+                :key="index" :icon="item.icon" :title="item.title">
                 <template v-for="(tool, index2) in item.list">
-                    <nuxt-link
-                        v-if="showBtn(tool)"
-                        :key="index2"
-                        :target="$store.state.setting.inNewTab ? '_blank' : '_self'"
-                        :title="tool.name"
-                        :to="tool.path"
-                        class="nya-btn"
-                        :class="[tool.hot, {'badge': tool.hot}]"
-                    >
+                    <nuxt-link v-if="showBtn(tool)" :key="index2"
+                        :target="$store.state.setting.inNewTab ? '_blank' : '_self'" :title="tool.name" :to="tool.path"
+                        class="nya-btn" :class="[tool.hot, {'badge': tool.hot}]">
                         {{ tool.name }}
                     </nuxt-link>
                 </template>
             </nya-container>
         </template>
 
-        <nya-container v-if="!$store.state.setting.hideNotice" v-show="!searchText" title="公告" icon="volume-down-outline">
+        <nya-container v-if="!$store.state.setting.hideNotice" v-show="!searchText" title="公告"
+            icon="volume-down-outline">
             <ul class="nya-list">
-                <li>本项目基于 <a href="https://github.com/Ice-Hazymoon/MikuTools" target="_blank" rel="noopener noreferrer">MikuTools</a> 构建而成</li>
+                <li>本项目基于 <a href="https://github.com/Ice-Hazymoon/MikuTools" target="_blank"
+                        rel="noopener noreferrer">MikuTools</a> 构建而成</li>
+                <li>各大电商平台：<a href="https://app.wehere.top/" target="_blank">优惠券 </a></li>
                 <li>
                     <div class="badge-info">
-                        <span class="badge hot">热门</span> <span class="badge vip">VIP</span> <span class="badge new">新功能</span> <span class="badge recommend">推荐</span>
+                        <span class="badge hot">热门</span> <span class="badge vip">VIP</span> <span
+                            class="badge new">新功能</span> <span class="badge recommend">推荐</span>
                     </div>
                 </li>
                 <li><b>欢迎将本站收藏到收藏夹，以便以后使用</b></li>
-                <li>
+
+                <!-- <li>
                     本站域名：<a
                         :href="$store.state.env.url"
                         target="_blank"
                         rel="noopener noreferrer"
                     >{{ $store.state.env.domain }}</a>
-                </li>
+                </li> -->
                 <li v-if="$store.state.isMobile.any">
                     如果遇到无法使用或者样式问题，请更换浏览器后重试，推荐使用 Chrome 浏览器，对 iOS 设备兼容性可能不太好
                 </li>
@@ -87,13 +65,7 @@
         <nya-container v-if="!$store.state.setting.hidePay" v-show="!searchText" title="打赏" icon="credit-card-outline">
             <ul class="pay">
                 <li>
-                    <img src="../assets/qq.png" alt="qq">
-                    <div class="name">
-                        QQ
-                    </div>
-                </li>
-                <li>
-                    <img src="../assets/weixin.png" alt="weixin">
+                    <img src="../assets/wxpay.png" alt="weixin">
                     <div class="name">
                         微信
                     </div>

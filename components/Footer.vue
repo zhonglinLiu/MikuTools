@@ -1,6 +1,6 @@
 <template>
     <div class="vfooter">
-        <a title="QQ群" href="https://jq.qq.com/?_wv=1027&k=5aPVskX" target="_blank" rel="noopener noreferrer">
+        <!-- <a title="QQ群" href="https://jq.qq.com/?_wv=1027&k=5aPVskX" target="_blank" rel="noopener noreferrer">
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-QQ" />
             </svg>
@@ -28,7 +28,7 @@
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-weibo" />
             </svg>
-        </a>
+        </a> -->
     </div>
 </template>
 
