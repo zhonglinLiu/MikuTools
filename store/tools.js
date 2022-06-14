@@ -184,8 +184,9 @@ export const state = () => {
                             '淘宝优惠券',
                             '拼多多优惠券'
                         ],
-                        description: '优惠券大全'
-                    }
+                        description: '优惠券大全',
+                    },
+                    hot:'hot'
                 }
             ]
         },
@@ -202,7 +203,7 @@ export const state = () => {
                     }
                 },
                 {
-                    name: 'Anime 4K',
+                    name: '图片修复',
                     path: '/anime4k',
                     head: {
                         keywords: ['anime'],
@@ -309,6 +310,19 @@ export const state = () => {
                         ],
                         description: '在线身份证加水印'
                     }
+                },
+                {
+                    name: '头像生成',
+                    path: '/avatar',
+                    head: {
+                        keywords: [
+                            '随机生成头像',
+                            'Notion风格',
+                            '头像制作'
+                        ],
+                        description: '头像生成'
+                    },
+                    hot: 'hot'
                 }
             ]
         },

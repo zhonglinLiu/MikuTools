@@ -2,7 +2,7 @@
   "name": "miku-tools",
   "version": "1.0.0",
   "description": "My tool set",
-  "author": "Ice-Hazymoon",
+  "author": "zhonglin.liu",
   "private": true,
   "scripts": {
     "dev": "nuxt --hostname 0.0.0.0",
