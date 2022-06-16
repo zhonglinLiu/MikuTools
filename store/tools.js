@@ -187,6 +187,19 @@ export const state = () => {
                         description: '优惠券大全',
                     },
                     hot:'hot'
+                },
+                {
+                    name: '每日一言',
+                    path: '/yiyan',
+                    head: {
+                        keywords: [
+                            '美好的句子',
+                            '诗词',
+                            '抖机灵'
+                        ],
+                        description: '总有那么一句话能打动你',
+                    },
+                    hot:'new'
                 }
             ]
         },
@@ -203,7 +216,7 @@ export const state = () => {
                     }
                 },
                 {
-                    name: '图片修复',
+                    name: '图片变清晰',
                     path: '/anime4k',
                     head: {
                         keywords: ['anime'],
