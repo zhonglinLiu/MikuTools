@@ -1,6 +1,21 @@
 export const state = () => {
     const tools = [
         {
+            title: '搞笑',
+            icon: 'layers-outline',
+            list: [
+               {
+                    name: '狗屁不通文章生成器',
+                    path: '/bullshit_gen',
+                    head: {
+                        keywords: ['狗屁不通', '文字', '人工智障'],
+                        description: '狗屁不通文字生成器'
+                    },
+                    hot:'new'
+                } 
+            ]
+        },
+        {
             title: '其他工具',
             icon: 'layers-outline',
             list: [
@@ -423,6 +438,14 @@ export const state = () => {
                     path: '/autoprefixer',
                     head: {
                         keywords: ['CSS兼容性处理', 'autoprefixer', 'postcss'],
+                        description: '在线CSS兼容性处理'
+                    }
+                },
+                {
+                    name: 'CSS 自定义边框',
+                    path: '/custom_border',
+                    head: {
+                        keywords: ['CSS 自定义边框', 'css', 'border'],
                         description: '在线CSS兼容性处理'
                     }
                 },

@@ -231,7 +231,7 @@ module.exports = {
     //     offlineAssets: ['/offline.html']
     // },
     router: {
-        base: process.env.NODE_ENV === 'production' ? '/tools' : '/',
+        base: process.env.NODE_ENV === 'production' ? '/' : '/',
         prefetchLinks: false,
         middleware: ['getCurrentTool', 'baidupush']
     }
