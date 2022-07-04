@@ -231,7 +231,7 @@ export const state = () => {
                     }
                 },
                 {
-                    name: '图片变清晰',
+                    name: '图片无损放大',
                     path: '/anime4k',
                     head: {
                         keywords: ['anime'],
